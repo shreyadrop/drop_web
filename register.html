@@ -51,7 +51,8 @@ var email=document.getElementById("email").value;
 var city=document.getElementById("city").value
 if(name!=""&&phone!=""&&email!=""&&city!="")
 {
-var win=window.open("https://drop-9f40e.web.app")
+{
+var win=window.open("https://drop-9f40e.web.app/"+name+","+phone+","+email+","+city)
 win.name=name+","+phone+","+email+","+city;
 }
 else
