@@ -61,6 +61,7 @@ $(document).ready(function() {
     $('.collapse-target').hide();
     $(document).on('click', '.collapse-trigger', function() {
         // $(this).toggleClass('after-plus after-minus');
+         $('.collapse-target').hide();
         $(this).next().slideToggle();
         return false;
     });
