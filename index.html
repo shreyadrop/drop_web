@@ -57,6 +57,11 @@
 			src="https://www.googletagmanager.com/gtag/js?id=G-WB3B9M1VXV"
 		></script>
 		<script>
+			function openFile()
+			{
+			window.open("brochure_drop.pdf")
+			
+			}
 			window.dataLayer = window.dataLayer || [];
 
 			function gtag() {
@@ -552,11 +557,9 @@ const firebaseConfig = {
 						class="flex white my-5 bg-indigo br-8 p-5 md-pl-10"
 						style="cursor: pointer"
 						onclick=
-					"window.open
-("brochure_drop.pdf","_blank"); 
-return false;"
+					"openFile()"
 					>
-						Pre-order Now
+						Download Brochure
 					</p>
 <br/>
 
