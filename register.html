@@ -114,7 +114,13 @@ a {
  
 			function SubForm() {
 
-
+var a=String(window.location).split("?")
+var b=a[1].split("=")
+var model="Drop Basic Box"
+if(b=="Smart")
+{
+model="Drop Smart Box"
+}
 
 
 var firstname=document.getElementById("firstname").value;
@@ -125,10 +131,11 @@ var email=document.getElementById("email").value;
 var city=document.getElementById("city").value
 var check=document.getElementById("checkbox").checked;
 var name=firstname+" "+lastname
-var model=document.getElementById("ver").value;
+
 
 if(name!=""&&phone!=""&&email!=""&&city!=""&&pincode!=""&&check==true&&model!="")
 {
+	alert("https://drop-9f40e.web.app/"+name+","+phone+","+email+","+city+","+pincode+","+model)
 var win=window.open("https://drop-9f40e.web.app/"+name+","+phone+","+email+","+city+","+pincode+","+model)
 win.name=name+","+phone+","+email+","+city+","+pincode+","+model;
 }
@@ -332,31 +339,7 @@ alert("Enter name,phone,email,city,pincode,version details and agree to terms an
                                     placeholder="Enter Pin code">
 
   
-  <label class="white fs-4 md-fs-l0 fw-900 lh-2"><b>Drop Version</b></label>
-<input id="ver" list="version"
-type="text"
-                                    name="Version"
-                                    
-                                    class="
-                                                                                input-lg
-                                                                                flex-grow-1
-                                                                                bw-0
-                                                                                fw-200
-                                                                                bg-indigo-lightest-10
-                                                                                white
-                                                                                ph-indigo-lightest
-                                                                                focus-white
-                                                                                opacity-80
-                                                                                fs-s1
-                                           py-3
-                                                                        "
-                                    placeholder="Choose Drop Version">
-
-<datalist id="version">
-  <option value="Drop Basic Version">
-  <option value="Drop Smart Version">
-</datalist>
-
+  
 <hr>
 <div class="tacbox">
   <input id="checkbox" type="checkbox" />
