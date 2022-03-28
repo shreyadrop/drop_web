@@ -116,12 +116,15 @@ a {
 
 var a=String(window.location).split("?")
 var b=a[1].split("=")
-var model="Drop Basic Box"
-if(b[1]=="Smart")
+var model=""
+if(String(b[1)]==="Smart")
 {
 model="Drop Smart Box"
 }
-
+else
+{
+model="Drop Basic Box"
+}
 
 var firstname=document.getElementById("firstname").value;
 var phone=document.getElementById("phone").value;
